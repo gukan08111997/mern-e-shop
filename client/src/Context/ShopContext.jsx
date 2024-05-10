@@ -27,12 +27,12 @@ const ShopContextProvider = ({ children }) => {
 
   useEffect(() => {
     async function fetchData() {
-      let response = await fetch("http://localhost:3000/products");
+      let response = await fetch("https://mern-e-shop-api.vercel.app/products");
       response = await response.json();
       setAll_product(response.data.products);
 
       if(localStorage.getItem("Auth-token")){
-        let response1 = await fetch("http://localhost:3000/users/cart",{
+        let response1 = await fetch("https://mern-e-shop-api.vercel.app/users/cart",{
           method:"POST",
           headers:{
             Accept:"application/form-data",
@@ -46,7 +46,7 @@ const ShopContextProvider = ({ children }) => {
           
           setCartItems(response1.data.cart);
         }
-        let response2 = await fetch("http://localhost:3000/orders/user",{
+        let response2 = await fetch("https://mern-e-shop-api.vercel.app/orders/user",{
       headers:{
         Accept:"application/json",
         "Content-Type":"application/json",
@@ -72,7 +72,7 @@ const ShopContextProvider = ({ children }) => {
       };
     });
     if (localStorage.getItem("Auth-token")) {
-      let response = await fetch("http://localhost:3000/users/cart/add", {
+      let response = await fetch("https://mern-e-shop-api.vercel.app/users/cart/add", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -93,7 +93,7 @@ const ShopContextProvider = ({ children }) => {
       };
     });
     if(localStorage.getItem("Auth-token")){
-      let response = await fetch("http://localhost:3000/users/cart/remove", {
+      let response = await fetch("https://mern-e-shop-api.vercel.app/users/cart/remove", {
         method: "POST",
         headers: {
           Accept: "application/form-data",

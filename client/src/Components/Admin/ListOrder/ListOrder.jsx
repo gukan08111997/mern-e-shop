@@ -6,7 +6,7 @@ import view_icon from "../../../assets/view_icon.jpg";
 const ListOrder = () => {
   const [allOrders, setAllOrders] = useState([]);
   const fetchOrders = async () => {
-    let response = await fetch("http://localhost:3000/orders", {
+    let response = await fetch("https://mern-e-shop-api.vercel.app/orders", {
       headers: {
         "Auth-token": localStorage.getItem("Auth-token"),
       },

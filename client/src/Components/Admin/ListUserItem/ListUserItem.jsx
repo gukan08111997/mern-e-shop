@@ -7,7 +7,7 @@ const ListUserItem = ({ user,fetchUsers }) => {
     const [updatedRole, setUpdatedRole] = useState("");
     const [isUpdate, setIsUpdate] = useState(false);
   const edit_userRole = async (id) => {
-    let response = await fetch("http://localhost:3000/users/" + id, {
+    let response = await fetch("https://mern-e-shop-api.vercel.app/users/" + id, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

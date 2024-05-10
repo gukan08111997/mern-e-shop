@@ -7,7 +7,7 @@ const [new_collection,setNew_collection] = useState([]);
 
 useEffect(()=>{
   async function fetchData(){
-    let response = await fetch("http://localhost:3000/products/new");
+    let response = await fetch("https://mern-e-shop-api.vercel.app/products/new");
     if(response.status===200){
       response = await response.json();
       setNew_collection(response.data.products)

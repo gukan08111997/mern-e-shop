@@ -1,6 +1,6 @@
 export default async function loader({params}){
     const orderId = params.orderId;
-    let response = await fetch("http://localhost:3000/orders/"+orderId,{
+    let response = await fetch("https://mern-e-shop-api.vercel.app/orders/"+orderId,{
         headers:{
             "auth-token":localStorage.getItem("Auth-token")
         }

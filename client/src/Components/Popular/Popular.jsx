@@ -7,7 +7,7 @@ const [popularProducts,setPopularProducts] = useState([]);
 
 useEffect(()=>{
   async function fetchData(){
-    let response= await fetch(`http://localhost:3000/products/${category}`);
+    let response= await fetch(`https://mern-e-shop-api.vercel.app/products/${category}`);
     if(response.status===200){
       response = await response.json();
       setPopularProducts(response.data.products);

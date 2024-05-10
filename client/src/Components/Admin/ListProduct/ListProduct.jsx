@@ -4,7 +4,7 @@ import cross_icon from "../../../assets/cross_icon.png";
 const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
   const fetchProducts = async () => {
-    let response = await fetch("http://localhost:3000/products");
+    let response = await fetch("https://mern-e-shop-api.vercel.app/products");
     response = await response.json();
     if (response.data.products.length > 0) {
       setAllProducts(response.data.products);
@@ -17,7 +17,7 @@ const ListProduct = () => {
   }, []);
 
   const remove_product = async (id)=>{
-    let response = await fetch("http://localhost:3000/products/"+id,{
+    let response = await fetch("https://mern-e-shop-api.vercel.app/products/"+id,{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json"

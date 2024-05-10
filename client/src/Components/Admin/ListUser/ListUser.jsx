@@ -7,7 +7,7 @@ const ListUser = () => {
   const [allUsers, setAllUsers] = useState([]);
 
   const fetchUsers = async () => {
-    let response = await fetch("http://localhost:3000/users");
+    let response = await fetch("https://mern-e-shop-api.vercel.app/users");
     response = await response.json();
     if (response.data.users.length > 0) {
         console.log(response.data.users);

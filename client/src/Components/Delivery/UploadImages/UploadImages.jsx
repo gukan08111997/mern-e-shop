@@ -32,7 +32,7 @@ const [image2,setImage2] = useState(false);
     const formData = new FormData();
     formData.append("product",image1);
 
-    const response = await fetch("http://localhost:3000/upload",{
+    const response = await fetch("https://mern-e-shop-api.vercel.app/upload",{
 method:"POST",
 headers:{
   Accept:"application/json"
@@ -42,7 +42,7 @@ body:formData
     responseData = await response.json();
 
     if(responseData.status==="success"){
-      let response = await fetch(`http://localhost:3000/orders/${orderId}/image`,{
+      let response = await fetch(`https://mern-e-shop-api.vercel.app/orders/${orderId}/image`,{
         method:"PATCH",
         headers:{
           Accept:"application/json",
@@ -68,7 +68,7 @@ body:formData
     const formData = new FormData();
     formData.append("product",image2);
 
-    const response = await fetch("http://localhost:3000/upload",{
+    const response = await fetch("https://mern-e-shop-api.vercel.app/upload",{
 method:"POST",
 headers:{
   Accept:"application/json"
@@ -78,7 +78,7 @@ body:formData
     responseData = await response.json();
 
     if(responseData.status==="success"){
-      let response = await fetch(`http://localhost:3000/orders/${orderId}/image`,{
+      let response = await fetch(`https://mern-e-shop-api.vercel.app/orders/${orderId}/image`,{
         method:"PUT",
         headers:{
           Accept:"application/json",

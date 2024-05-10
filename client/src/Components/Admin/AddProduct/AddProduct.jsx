@@ -33,7 +33,7 @@ const [productDetails,setProductDetails] = useState({
     const formData = new FormData();
     formData.append("product",image);
 
-    const response = await fetch("http://localhost:3000/upload",{
+    const response = await fetch("https://mern-e-shop-api.vercel.app/upload",{
 method:"POST",
 headers:{
   Accept:"application/json"
@@ -45,7 +45,7 @@ body:formData
     if(responseData.status==="success"){
       product.image = responseData.image_url;
       console.log(product);
-      let response = await fetch("http://localhost:3000/products",{
+      let response = await fetch("https://mern-e-shop-api.vercel.app/products",{
         method:"POST",
         headers:{
           Accept:"application/json",

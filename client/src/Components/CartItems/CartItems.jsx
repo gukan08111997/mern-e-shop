@@ -19,7 +19,7 @@ all_product.map(product=>{
     removeFromCart(product.id);
   }
 })
-let response = await fetch("http://localhost:3000/orders",{
+let response = await fetch("https://mern-e-shop-api.vercel.app/orders",{
   method:"POST",
   headers:{
     Accept:"application/json",

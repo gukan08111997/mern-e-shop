@@ -9,7 +9,7 @@ const ListOrderItem = () => {
 const order = useLoaderData();
   
   const handleCancelOrder = async () =>{
-    let response = await fetch(`http://localhost:3000/orders/${orderId}`,{
+    let response = await fetch(`https://mern-e-shop-api.vercel.app/orders/${orderId}`,{
       method:"DELETE",
       headers:{
         Accept:"application/json",
@@ -29,7 +29,7 @@ const order = useLoaderData();
    
 
     const handleVerify = async ()=>{
-        let response = await fetch("http://localhost:3000/orders/"+orderId,{
+        let response = await fetch("https://mern-e-shop-api.vercel.app/orders/"+orderId,{
             method:"PATCH",
             headers:{
                 "auth-token":localStorage.getItem("Auth-token")

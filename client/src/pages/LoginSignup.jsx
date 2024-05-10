@@ -19,7 +19,7 @@ const handleChange = (e)=>{
   })
 }
   const login = async()=>{
-    let response = await fetch("http://localhost:3000/users/login",{
+    let response = await fetch("https://mern-e-shop-api.vercel.app/users/login",{
       method:"POST",
       headers:{
         Accept:"application/form-data",
@@ -47,7 +47,7 @@ const handleChange = (e)=>{
   }
 
   const signup = async()=>{
-let response = await fetch("http://localhost:3000/users/signup",{
+let response = await fetch("https://mern-e-shop-api.vercel.app/users/signup",{
   method:"POST",
   headers:{
     Accept:"application/form-data",
