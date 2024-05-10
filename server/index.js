@@ -13,7 +13,11 @@ const orderRouter = require("./Routes/orderRoutes");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:[""],
+    methods:["POST","GET","PUT","PATCH","DELETE"],
+    credentials:true
+}));
 
 // connection to mongodb Database
 mongoose.connect("mongodb+srv://gukan08111997intelligent:9pdX2o9qyA37pzyJ@cluster0.pc7yxwy.mongodb.net/e-commerce-furn").then(con=>{
