@@ -26,6 +26,10 @@ mongoose.connect("mongodb+srv://gukan08111997intelligent:9pdX2o9qyA37pzyJ@cluste
     console.log(err);
 })
 
+app.get("/",(req,res)=>{
+    res.send("hello");
+})
+
 //API Creation
 app.use("/products",productRouter);
 app.use("/users",userRouter);
