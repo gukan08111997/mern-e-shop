@@ -1,6 +1,4 @@
 const express = require("express");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const multer = require("multer");
@@ -13,11 +11,7 @@ const orderRouter = require("./Routes/orderRoutes");
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-    origin:["mern-e-shop-67v5oot4r-gukans-projects.vercel.app/"],
-    methods:["POST","GET","PUT","PATCH","DELETE"],
-    credentials:true
-}));
+app.use(cors());
 
 // connection to mongodb Database
 mongoose.connect("mongodb+srv://gukan08111997intelligent:9pdX2o9qyA37pzyJ@cluster0.pc7yxwy.mongodb.net/e-commerce-furn").then(con=>{
