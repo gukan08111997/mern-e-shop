@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:["https://mern-e-shop-api.vercel.app/"],
+    origin:["mern-e-shop-67v5oot4r-gukans-projects.vercel.app/"],
     methods:["POST","GET","PUT","PATCH","DELETE"],
     credentials:true
 }));
